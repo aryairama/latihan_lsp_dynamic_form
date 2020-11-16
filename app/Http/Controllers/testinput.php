@@ -11,8 +11,7 @@ class testinput extends Controller
         $jam = array();
         $arr = array();
         $mapel = array();
-        $hasiltotal = 0;
-        $input = $request->kolom;
+        $input = $request->input;
         $nilai = array();
         if ($request->kirim) {
             for ($i = 1 ;$i<= $input;$i++) {
@@ -33,8 +32,8 @@ class testinput extends Controller
                 $jam[$i] = $request->input('jam'.$i);
                 $mapel[$i] = $request->input('pelajaran'.$i);
             }
-            return view('testinput', \compact('arr', 'input', 'request','nilai','jam','mapel'));
+            return view('testinput', \compact('arr', 'input', 'request', 'nilai', 'jam', 'mapel'));
         }
-        return view('testinput', \compact('input', 'hasiltotal'));
+        return view('testinput', \compact('input'));
     }
 }

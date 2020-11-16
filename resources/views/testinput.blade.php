@@ -9,7 +9,8 @@
 
 <body>
     <form action="{{route('test.test')}}" method="get">
-        <label for="">Masukkan Jumlah Input</label><input type="text" name="kolom" value="{{ $input }}">
+        <label for="">Masukkan Jumlah Input</label>
+        <input type="text" name="input" value="{{Request::get('input')}}">
         <button type="submit">klik</button>
         <br>
         <br>
@@ -45,7 +46,7 @@
                             </tr>
                         @endfor
                         <tr>
-                            <td colspan="{{ $input }}">
+                            <td colspan="3">
                                 @php
                                 $total = array_sum($arr) / $input;
                                 print_r($total);
