@@ -30,7 +30,6 @@
                 </tr>
             </thead>
             <tbody class="isi">
-
             </tbody>
         </table>
     </div>
@@ -39,9 +38,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script>
         $(document).ready(function(){
+            let nilai = new Array(),mapel = new Array(),jam = new Array(),hasil = new Array()
             $('.container-tabel').css("display","none")
             $('.container-input').on('submit','.form-inputs',function(e){
-                let nilai = new Array(),mapel = new Array(),jam = new Array(),hasil = new Array()
             e.preventDefault()
             $('.container-dynamic').empty()
             $('.container-tabel').css("display","none")
@@ -59,7 +58,8 @@
             }
             $('.container-button').empty()
             $('.container-button').append('<button id="kirim">Kirim</button>')
-            $('#kirim').on('click',function(){
+            })
+            $('.container-button').on('click','#kirim',function(){
                 for (let index = 1; index <= $('#input').val(); index++) {
                     if ($(`#nilai${index}`).val() === "A") {
                     hasil[index] = 100;
@@ -96,7 +96,6 @@
                 </tr>
                 `)
             })
-        })
         ///
         })
     </script>
