@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('test', 'testinput@tambahinput')->name('test.test');
+Route::view('/js', 'input_js');
